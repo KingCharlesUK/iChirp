@@ -1,0 +1,9 @@
+overwrite: true
+schema: "https://studio.apollographql.com"
+documents: "src/graphql/**/*.graphql"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-urql"
