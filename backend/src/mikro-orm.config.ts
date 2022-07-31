@@ -1,6 +1,7 @@
 import { Options } from '@mikro-orm/core';
 import { MikroORM } from '@mikro-orm/core';
 import path from 'path';
+import { Chirps } from './entities/Chirps';
 import { Users } from './entities/Users';
 
 const config: Options = {
@@ -9,7 +10,7 @@ const config: Options = {
         glob: '!(*.d).{js,ts}',
         snapshot: false
     },
-    entities: [Users],
+    entities: [Users, Chirps],
     allowGlobalContext: true,
     dbName: 'ichirp',
     type: 'postgresql',

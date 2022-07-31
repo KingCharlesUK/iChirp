@@ -55,7 +55,7 @@ const main = async () => {
             resolvers: [UserResolver],
             validate: false
         }),
-        context: ({  }) => ({ em: orm.em })
+        context: ({ req, res }) => ({ em: orm.em, req, res })
     });
     await apolloServer.start();
     apolloServer.applyMiddleware({ app, cors: corsOptions });
